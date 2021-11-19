@@ -36,6 +36,9 @@ export class FirebaseService {
         this.isLoggedIn = true
         localStorage.setItem('user', JSON.stringify(res.user))
       })
+      .catch(error =>{
+        alert("Incorrect Username Or Password");
+      })
   }
 
   async signup(email: string, password: string) {
@@ -43,6 +46,9 @@ export class FirebaseService {
       .then(res => {
         this.isLoggedIn = true
         localStorage.setItem('user', JSON.stringify(res.user))
+      })
+      .catch(error =>{
+        alert("Email already exists");
       })
   }
 
