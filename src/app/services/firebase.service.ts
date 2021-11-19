@@ -76,9 +76,4 @@ export class FirebaseService {
     })
   }
 
-
-
-
-
-
 }
